@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Quiz Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎓 Education Quiz Application</h1>
+            <p>Test your knowledge across multiple subjects</p>
+        </header>
+
+        <!-- Home Page -->
+        <div class="content" id="homePage">
+            <h2 style="text-align: center; color: #333; margin-bottom: 30px;">Choose Your Subject</h2>
+            <div class="subject-grid" id="subjectGrid"></div>
+        </div>
+
+        <!-- Quiz Page -->
+        <div class="content quiz-container" id="quizPage">
+            <div class="quiz-header">
+                <h2 id="subjectTitle">Subject Quiz</h2>
+                <div class="question-counter">
+                    Question <span id="currentQuestion">1</span> of <span id="totalQuestions">10</span>
+                </div>
+            </div>
+
+            <div class="question-box">
+                <div class="question-text" id="questionText"></div>
+                <div class="options" id="optionsContainer"></div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-secondary" id="backBtn">Back to Home</button>
+                <button class="btn" id="nextBtn" disabled>Next Question</button>
+            </div>
+        </div>
+
+        <!-- Result Page -->
+        <div class="content result-container" id="resultPage">
+            <h2>Quiz Complete! 🎉</h2>
+            <div class="score-display" id="scoreDisplay"></div>
+            <div class="result-message" id="resultMessage"></div>
+            <button class="btn" id="restartBtn">Back to Home</button>
+        </div>
+    </div>
+
+    <script src="quiz-data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
